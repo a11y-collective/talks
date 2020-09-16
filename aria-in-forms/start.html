@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Let's build a form</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="error-feedback.js"></script>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body>
+
+		<header>
+			<h1>Let's build a form</h1>
+		</header>
+
+		<main>
+
+			<div class="block" id="top-form">
+
+	                <h2>Subscribe to our newsletter</h2>
+	                <p>Please fill out the required fields, labeled with *</p>
+
+					<div id="errors" class="errors" tabindex="-1" role="alert"></div>
+
+	                <form action="#" class="form-errors">
+	                
+	                    <label for="name">Name *</label>
+	                    <input id="name" type="text" required autocomplete="full-name">
+	                    <p class="description">Enter your full name.</p>
+	                    <p id="name-error" class="description error-message"></p>
+
+	                    <label for="email">E-mail *</label>
+	                    <input id="email" type="text" required autocomplete="email">
+	                    <p class="description error-message"></p>
+
+	                    <button>Send</button>
+
+	                </form>
+
+	        </div>
+
+		</main>
+
+		<footer>
+			<p><a href="index.html">Back to index</a></p>
+		</footer>
+
+	</body>
+
+</html>
