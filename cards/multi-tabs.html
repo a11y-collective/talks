@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Multiple tab stops to the same link</title>
+	<title>Avoid multiple links to the same post</title>
 	<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
 	<meta name="robots" content="noindex,nofollow">
@@ -13,7 +13,7 @@
 
 	<header role="banner">
 
-		<h1>Multiple tab stops to the same link</h1>
+		<h1>Avoid multiple links to the same post</h1>
 
 	</header>
 
@@ -24,7 +24,14 @@
 		<ul class="multi-tabs">
 
 			<li>
-				<img src="../../demos/img/noah.jpg" alt="Noah, sitting behind his laptop, smiling at the camera">
+                <a href="https://a11y-collective.com/" aria-label="Title of the blogpost"><img src="../../demos/img/noah.jpg" alt="Noah, sitting behind his laptop, smiling at the camera."></a>
+                <h3><a href="https://a11y-collective.com/">Starting point.</a></h3>
+                <p>3 links to the same post in one card.<br /><a href="https://a11y-collective.com/">Read more<span class="screen-reader-text"> about Title of the blogpost</span></a></p>
+            </li>
+
+
+			<li>
+				<img src="../../demos/img/noah.jpg" alt="">
 				<h3><a href="https://a11y-collective.com/">Use only one link</a></h3>
 				<p>The basis: only one link, inside the heading, that is clickable. The rest is not linked and also not clickable.</p>
 			</li>
@@ -35,29 +42,29 @@
 				</a>
 				<h3><a href="https://a11y-collective.com/">Hide links</a></h3>
 				<p>Use multiple links, but hide them for keyboard and screen reader users.</p>
-				<p>Use tabindex="-1" aria-hidden="true" <strong>together</strong> on a link to hide it.</p>
+				<p>Use tabindex="-1" aria-hidden="true" <strong>together</strong> on a link to hide it.<br /><a href="https://a11y-collective.com/" tabindex="-1" aria-hidden="true">Read more<span class="screen-reader-text"> about Title of the blogpost</span></a></p>
 			</li>
 
 			<li class="card">
 				<a href="https://a11y-collective.com/">
-					<img src="../../demos/img/noah.jpg" alt="Noah, sitting behind his laptop, smiling at the camera">
+					<img src="../../demos/img/noah.jpg" alt="Noah, sitting behind his laptop, smiling at the camera.">
 					<h3>Bad practice: Put an &lt;a&gt; around everything</h3>
 					<p>This will result in very long, link and heading texts and a pain to listen to if you use a screen reader.</p>
 				</a>
 			</li>
 
 			<li class="to-be-covered card">
-				<img src="../../demos/img/noah.jpg" alt="Noah, sitting behind his laptop, smiling at the camera">
+				<img src="../../demos/img/noah.jpg" alt="">
 				<h3>
 					<a href="https://a11y-collective.com/">Option: use a span to cover the card.
 						<span></span>
 					</a>
 				</h3>
-				<p>Have one link inside the card to the post. Add a span inside the link so it covers the complete card. Props: Janita Top.</p>
+				<p>Have one link inside the card to the post. Add a span inside the link so it covers the complete card.</p>
 			</li>
 
 			<li class="to-be-covered pseudo card">
-				<img src="../../demos/img/noah.jpg" alt="Noah, sitting behind his laptop, smiling at the camera">
+				<img src="../../demos/img/noah.jpg" alt="">
 				<h3><a href="https://a11y-collective.com/">Option: using pseudo-content</a></h3>
 				<p>This is the preferred method.</p>
 				<p>Give the card container element position: relative;</p>
@@ -65,7 +72,7 @@
 			</li>
 
 			<li class="to-be-covered pseudo card">
-				<img src="../../demos/img/noah.jpg" alt="Noah, sitting behind his laptop, smiling at the camera">
+				<img src="../../demos/img/noah.jpg" alt="">
 				<h3><a href="https://w3c.org">Bad practice: using pseudo-content, plus extra link</a></h3>
 				<p><a href="https://a11y-collective.com">Extra link to another page within the clickable card</a>: give it a positive z-index and position relative.</p>
 				<p>This is in fact a nested interactive control (a link within a link) even if in the HTML the links are separated.
