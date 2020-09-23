@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="noindex, nofollow">
+		<title>Begrijpelijke links</title>
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body>
+
+		<header>
+			<h1>Begrijpelijke links</h1>
+		</header>
+
+		<main>
+
+
+			<ul class="images">
+                <li>
+
+                    <h2>Relax en lees een boek</h2>
+
+                    <p>Al onze favoriete boeken, speciaal voor jou op een rijtje.<br />
+                        <a href="#">Lees meer</a>.
+                    </p>
+
+                </li>
+
+                <li>
+
+                    <h2>Relax en lees een boek</h2>
+
+                    <p>Al onze favoriete boeken, speciaal voor jou op een rijtje.<br />
+                        <a href="#">Bekijk al onze favoriete boeken</a>.
+                    </p>
+
+                </li>
+
+            </ul>
+
+			<h2>Verberg extra tekst voor het zicht</h2>
+
+			<h3>Met CSS:</h3>
+			<p>&lt;span class="screen-reader-text"&gt; over onze favoriete boeken&lt;/span>.</p>
+
+			<pre>
+			        .screen-reader-text {
+			          border: 0;
+			          clip: rect(1px, 1px, 1px, 1px);
+			          clip-path: inset(50%);
+			          height: 1px;
+			          margin: -1px;
+			          overflow: hidden;
+			          padding: 0;
+			          position: absolute;
+			          width: 1px;
+			          word-wrap: normal !important;
+			        }
+			 </pre>
+
+			<pre>&lt;a href="url-to-post"&gt;Lees meer&lt;span class="screen-reader-text"&gt; over onze favoriete boeken&lt;/span>&lt;/a&gt;.</pre>
+
+
+			<ul class="images">
+                <li>
+
+                    <h2>Relax en lees een boek</h2>
+
+                    <p>Al onze favoriete boeken, speciaal voor jou op een rijtje.<br />
+                        <a href="#">Lees meer<span class="screen-reader-text"> over onze favoriete boeken</span>.</a>
+                    </p>
+
+                </li>
+
+
+            </ul>
+
+            <h3>With ARIA</h3>
+
+            <pre>&lt;a href="url-to-post" aria-label="Lees meer over onze favoriete boeken"&gt;Lees meer&lt;/a>.</pre>
+
+            <ul class="images">
+                <li>
+
+                    <h2>Relax en lees een boek</h2>
+
+                    <p>Al onze favoriete boeken, speciaal voor jou op een rijtje.<br />
+                        <a href="#" aria-label="Lees meer over onze favoriete boeken">Lees meer</a>.
+                    </p>
+
+                </li>
+
+
+            </ul>
+
+            <p>Hoe zou jij de links naar 'View deals' oplossen op de website van <a href="https://www.virginatlantic.com/" hreflang="en">virginatlantic.com</a>?</p>
+
+
+            <h2>Bekijk eens</h2>
+			<ul>
+				<li><a href="https://www.virginatlantic.com/" hreflang="en">virginatlantic.com</a>, hoe zou jij de links naar de deals oplossen?</li>
+				<li><a href="https://www.vk.nl/">Volkskrant</a></li>
+                <li><a href="https://www.nu.nl/">Nu.nl</a></li>
+                <li><a href="https://www.ing.nl/particulier/index.html">ING</a></li>
+               <li><a href="https://www.mijndomein.nl/">mijdomein.nl</a></li>
+                <li>Een van je eigen projecten</li>
+            </ul>
+		</main>
+
+		<footer>
+            <p><a href="index.html">Terug naar de inhoudsopgave</a></p>
+        </footer>
+
+	</body>
+
+</html>
