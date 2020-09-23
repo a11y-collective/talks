@@ -16,6 +16,44 @@ body.wide {
     max-width: 80%;
 }
 
+h1, h2, h3 {
+    line-height: 1.1em;
+    font-family: Arvo,sans-serif;
+    font-weight: 700;
+}
+
+.header-with-logo header {
+    text-align: center;
+    line-height: 2;
+}
+
+.header-with-logo footer {
+    line-height: normal;
+}
+.header-with-logo h1  {
+    color: #0600ed;
+    line-height: 2;
+}
+
+.header-with-logo h1 span {
+    color: #333;
+}
+
+.header-logo {
+    width: 150px;
+    height: auto;
+}
+
+.header-with-logo ul {
+    margin-left: 3em;
+    line-height: 3;
+    list-style: none;
+}
+
+.header-with-logo ul li {
+    border-bottom: 1px solid #757575;
+}
+
 p.narrow {
     max-width: 5em;
 }
@@ -62,10 +100,7 @@ p.right-width {
     margin-bottom: 1em;
 }
 
-h1, h2, h3 {
-    line-height: 1.1em;
-    font-family: 'Arvo', serif;
-}
+
 
 h2, h3 {
     margin-top: 2em;
