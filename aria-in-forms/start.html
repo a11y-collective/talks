@@ -7,7 +7,7 @@
 		<meta name="robots" content="noindex, nofollow">
 		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="error-feedback.js"></script>
+		<script src="form.js"></script>
 		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
 	</head>
 
@@ -22,20 +22,33 @@
 			<div class="block" id="top-form">
 
 	                <h2>Subscribe to our newsletter</h2>
+	                <p>Please fill out all fields and agree to the privacy policy.</p>
 
-	                <form action="#" class="form-errors">
+	                <div id="notifications"></div>
+
+	                <form id="example-form">
 
 	                    <div>
 		                    <label for="name">Name</label>
-		                    <input id="name" type="text">
+		                    <input id="name" type="text" autocomplete="name" required="required">
+		                    <p class="description">Give your first and last name.</p>
+		                    <p class="error-message" id="name-error"></p>
 	                    </div>
 
 						<div>
 		                    <label for="email">E-mail</label>
-		                    <input id="email" type="text">
+		                    <input id="email" type="email" autocomplete="email" required="required">
+		                    <p class="error-message" id="email-error"></p>
 						</div>
 
-	                    <button>Send</button>
+						<div>
+							<input id="terms" type="checkbox" required="required">
+                            <label for="terms">I agree with the privacy policy</label>
+                            <p class="description"><a href="index.html">Read our privacy policy</a></p>
+                            <p class="error-message" id="terms-error"></p>
+                        </div>
+
+	                    <button>Subscribe</button>
 
 	                </form>
 

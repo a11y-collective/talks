@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Let's build a form</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="form-order.js"></script>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+	</head>
+
+	<body>
+
+		<header>
+			<h1>Let's calculate</h1>
+		</header>
+
+		<main>
+
+			<div class="block" id="top-form">
+
+	                <h2>Order a t-shirt</h2>
+	                <p>Now on sale, get one for only &euro; 10!</p>
+	                <p>All the fields indicated with an * are required.</p>
+
+	                <div id="notifications"></div>
+
+	                <form id="example-form">
+
+	                    <div>
+		                    <label for="name">Name *</label>
+		                    <input id="name" type="text" name="name" autocomplete="name" required="required">
+		                    <p class="description">Give your first and last name.</p>
+		                    <p class="error-message" id="name-error"></p>
+	                    </div>
+
+						<div>
+		                    <label for="email">E-mail *</label>
+		                    <input id="email" type="email" name="email" autocomplete="email" required="required">
+		                    <p class="error-message" id="email-error"></p>
+						</div>
+
+						<div>
+	                        <label for="size">Size</label>
+	                        <select name="size" id="size">
+	                            <option>Small</option>
+	                            <option selected>Medium</option>
+	                            <option>Large</option>
+	                        </select>
+						</div>
+
+						<div>
+							<label for="amount">Amount</label>
+							<select name="amount" id="amount">
+								<option selected>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</div>
+
+                        <p>Total amount: &euro; <span id="total">10</span></p>
+
+	                    <button>Order</button>
+
+	                </form>
+
+	        </div>
+
+		</main>
+
+		<footer>
+			<p><a href="index.html">Back to index</a></p>
+		</footer>
+
+	</body>
+
+</html>
