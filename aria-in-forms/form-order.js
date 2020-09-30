@@ -50,6 +50,7 @@ $(document).ready(function() {
 
         total =  amount * price;
         $('#total').text(total);
+        $('#total').val(total);
     });
 
     function validateEmail(email) {

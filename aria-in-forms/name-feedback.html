@@ -7,6 +7,7 @@
 		<meta name="robots" content="noindex, nofollow">
 		<link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+		<script src="https://kit.fontawesome.com/86e2d5c464.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
@@ -21,38 +22,60 @@
 
 			<p><strong>First of all</strong>: use a visible label.</p>
 
-			<p>Order of retrieving the accessible name</p>
-			<ul>
-				<li>label</li>
-				<li>aria-label</li>
-				<li>aria-labelledby</li>
-				<li>aria-describedby</li>
-			</ul>
-
-			<h3>The HTML way</h3>
+			<h3>The basics</h3>
 			<form class="block">
-				<label for="id-textarea">Your question</label><br />
-				<textarea id="id-textarea"></textarea>
+				<div>
+				<p>Without associated label</p>
+<pre>
+&lt;label>Your question&lt;/label>
+&lt;textarea>&lt;/textarea>
+</pre>
+
+					<label>Your question</label><br />
+					<textarea></textarea>
+				</div>
+				<div>
+				<p>With associated label</p>
+<pre>
+&lt;label for="id-textarea">Your question&lt;/label>
+&lt;textarea id="id-textarea">&lt;/textarea>
+</pre>
+                    <label for="id-textarea">Your question</label><br />
+                    <textarea id="id-textarea"></textarea>
+                </div>
 			</form>
 
 	        <h3>A placeholder is not a label</h3>
+ <pre>
+ &lt;textarea placeholder="Your question">&lt;/textarea>
+ </pre>
+
             <form class="block">
                 <textarea placeholder="Your question"></textarea>
             </form>
 
-			<h3>aria-label</h3>
-			<p>Disadvantage: you don't have a visible label. But id does give the form control an accessible name.</p>
+			<h3>aria-label on the textarea</h3>
+ <pre>
+ &lt;textarea aria-label="Your question">&lt;/textarea>
+ </pre>
+			<p>Disadvantage: you don't have a visible label. But it does give the form control an accessible name.</p>
 			<form class="block">
 	            <textarea aria-label="Your question"></textarea>
 	        </form>
 
             <h3>A placeholder and aria-label</h3>
-
+ <pre>
+ &lt;textarea aria-label="Your question" placeholder="Describe your question.">&lt;/textarea>
+ </pre>
             <form class="block">
                 <textarea aria-label="Your question" placeholder="Describe your question."></textarea>
             </form>
 
 	        <h3>Aria-labelledby</h3>
+<pre>
+ &lt;div id="id-aria-labelledby">Your question&lt;/div>
+ &lt;textarea aria-labelledby="id-aria-labelledby">&lt;/textarea>
+</pre>
 	        <form class="block">
 	            <div id="id-aria-labelledby">Your question</div>
 	            <textarea aria-labelledby="id-aria-labelledby"></textarea>
@@ -60,11 +83,39 @@
 
 	        <h3>Aria-describedby</h3>
 	        <p>Is additional to the label text, and is useful to add extra information.</p>
+<pre>
+&lt;label for="id-password">Your new password&lt;/label>
+&lt;input type="password" id="id-password" aria-describedby="id-aria-describedby">
+&lt;p id="id-aria-describedby">Please use a password of minimal 8 characters.&lt;/p>
+</pre>
 	        <form class="block">
-	            <label for="id-password">Your password</label>
+	            <label for="id-password">Your new password</label>
 	            <input type="password" id="id-password" aria-describedby="id-aria-describedby" autocomplete="off">
 	            <p id="id-aria-describedby">Please use a password of minimal 8 characters.</p>
 	        </form>
+
+<h3>Icons</h3>
+<pre>
+	&lt;label for="s">Search&lt;/label>
+	&lt;input type="text" id="s" name="s">
+	&lt;button class="fake-button fa fa-search">&lt;/button>
+</pre>
+            <form class="block">
+                <label for="s">Search</label>
+                <input type="text" id="s" name="s">
+                <button class="fake-button fa fa-search"></button>
+            </form>
+
+<pre>
+    &lt;label for="s">Search&lt;/label>
+    &lt;input type="text" id="s" name="s">
+    &lt;button class="fake-button fa fa-search">&lt;/button>
+</pre>
+            <form class="block">
+                <label for="s">Search</label>
+                <input type="text" id="s" name="s">
+                <button class="fake-button fa fa-search" aria-label="Submit search"></button>
+            </form>
 
 		</main>
 
