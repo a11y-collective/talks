@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
 	</head>
 
-	<body>
+	<body class="wide">
 
 		<header>
 			<h1>Let's calculate</h1>
@@ -23,24 +23,10 @@
 
 	                <h2>Order a t-shirt</h2>
 	                <p>Now on sale, get one for only &euro; 10!</p>
-	                <p>All the fields indicated with an * are required.</p>
 
-	                <div id="notifications"></div>
+	                <div id="notifications" tabindex="-1"></div>
 
 	                <form id="example-form">
-
-	                    <div>
-		                    <label for="name">Name *</label>
-		                    <input id="name" type="text" name="name" autocomplete="name" required="required">
-		                    <p class="description">Give your first and last name.</p>
-		                    <p class="error-message" id="name-error"></p>
-	                    </div>
-
-						<div>
-		                    <label for="email">E-mail *</label>
-		                    <input id="email" type="email" name="email" autocomplete="email" required="required">
-		                    <p class="error-message" id="email-error"></p>
-						</div>
 
 						<div>
 	                        <label for="size">Size</label>
@@ -60,7 +46,10 @@
 							</select>
 						</div>
 
-                        <p>Total amount: &euro; <span id="total">10</span></p>
+						<div>
+	                        <label for="total">Total price</label>
+	                        <input type="text" id="total" readonly name="total" value="10">
+						</div>
 
 	                    <button>Order</button>
 

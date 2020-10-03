@@ -33,10 +33,10 @@ $(document).ready(function() {
 
 
         if ( ! error ) {
-            notifications.html('<h3 class="notification-ok">Thank you for ordering!</h3>');
+            notifications.html('<h3 class="notification-ok" role="alert">Thank you for ordering!</h3>');
         } else {
             notifications.html(
-                '<h3 class="notification-error">There are errors in your form</h3>' + '<ul class="error-list-ul">' + nameError + emailError + '</ul>');
+                '<h3 class="notification-error" role="alert">There are errors in your form</h3>' + '<ul class="error-list-ul">' + nameError + emailError + '</ul>');
         }
 
         document.getElementById("notifications").focus();

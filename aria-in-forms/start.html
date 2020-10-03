@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
 	</head>
 
-	<body>
+	<body class="wide">
 
 		<header>
 			<h1>Let's build a form</h1>
@@ -24,27 +24,27 @@
 	                <h2>Subscribe to our newsletter</h2>
 	                <p>Please fill out all fields and agree to the privacy policy.</p>
 
-	                <div id="notifications"></div>
+	                <div id="notifications" tabindex="-1"></div>
 
 	                <form id="example-form">
 
 	                    <div>
 		                    <label for="name">Name</label>
-		                    <input id="name" type="text" autocomplete="name" required="required">
-		                    <p class="description">Give your first and last name.</p>
+		                    <input id="name" type="text" autocomplete="name" required="required" aria-describedby="name-error desc-name">
+		                    <p class="description" id="desc-name">Give your first and last name.</p>
 		                    <p class="error-message" id="name-error"></p>
 	                    </div>
 
 						<div>
 		                    <label for="email">E-mail</label>
-		                    <input id="email" type="email" autocomplete="email" required="required">
+		                    <input id="email" type="email" autocomplete="email" required="required" aria-describedby="email-error">
 		                    <p class="error-message" id="email-error"></p>
 						</div>
 
 						<div>
-							<input id="terms" type="checkbox" required="required">
+							<input id="terms" type="checkbox" required="required"  aria-describedby="terms-error descr-terms">
                             <label for="terms">I agree with the privacy policy</label>
-                            <p class="description"><a href="index.html">Read our privacy policy</a></p>
+                            <p class="description" id="descr-terms"><a href="index.html">Read our privacy policy</a></p>
                             <p class="error-message" id="terms-error"></p>
                         </div>
 
