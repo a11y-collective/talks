@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms and beyond: Connect a label to a form control</title>
+    <link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+    <meta name="robots" content="noindex,nofollow">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Forms and beyond: Connect a label to a form control</h1>
+
+</header>
+
+<main>
+
+    <h2>Labelling</h2>
+
+    <form>
+
+        <div class="block">
+            <p>No label:</p>
+            <input type="text" name="colour">
+        </div>
+
+        <div class="block">
+            <p>Only a placeholder:</p>
+            <input type="text" name="colour" placeholder="What's your favourite colour?">
+        </div>
+
+        <div class="block">
+            <p>Not really a label, just text in a span next to the text:</p>
+            <span>What's your favourite colour?</span><br />
+            <input type="text" name="colour">
+        </div>
+
+        <div class="block">
+            <p>A label, but not attached to the input</p>
+            <label>What's your favourite colour?</label><br />
+            <input type="text" name="colour">
+        </div>
+
+        <div class="block">
+            <p>Proper label/input relation:</p>
+            <label for="colour1">What's your favourite colour?</label><br />
+            <input type="text" id="colour1" name="colour">
+        </div>
+
+        <div class="block">
+            <p>Proper label/input relation plus a placeholder:</p>
+            <label for="colour2">What's your favourite colour?</label><br />
+            <input type="text" id="colour2" name="colour" placeholder="Type a colour">
+        </div>
+        
+    </form>
+
+</main>
+
+<footer>
+    <p><a href="index.html">Back to index</a></p>
+    <p><a href="https://docs.gravityforms.com/category/knowledge-base/accessibility/">Gravity Forms Knowledge Base on Accessibility</a>.</p>
+    <p><a href="https://a11y-collective.com/">The A11Y collective</a>, online learning platform for web accessibility.</p>
+
+</footer>
+
+</body>
+
+</html>
