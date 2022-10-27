@@ -23,6 +23,7 @@ p.narrow {
 p.right-width {
     max-width: 40em;
 }
+
 .twitter {
     width: 4em;
     fill: #1da1f2
@@ -38,10 +39,12 @@ p.right-width {
     padding: 1em 0;
     margin-bottom: 1em;
 }
+h1 {
+    color: #0600ed;
+}
 
 h1, h2, h3 {
     line-height: 1.1em;
-    font-family: 'Arvo', serif;
 }
 
 h2, h3 {
@@ -61,7 +64,9 @@ img.left {
     width: 40%;
     display: block;
 }
-
+.no-focus * {
+    outline: 0;
+}
 table {
     border-collapse: collapse;
     margin-bottom: 4em;
@@ -87,6 +92,9 @@ blockquote {
     padding: 1em;
 }
 
+input {
+    border-color: #949494;
+}
 ::placeholder,
 ::-webkit-input-placeholder {
     color: #757575;
@@ -296,12 +304,11 @@ button:focus + [role="tooltip"] {
     margin: 1em 0;
 }
 
-/* Tooltip on emoij. */
+/* Tooltip on emoji. */
 
 span.tooltip {
     position: relative;
 }
-
 
 span.tooltip:hover::after,
 span.tooltip:focus::after{
@@ -322,8 +329,6 @@ span.tooltip:focus::after {
     display:block
 }
 
-
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
     border: 0;
@@ -337,6 +342,7 @@ span.tooltip:focus::after {
     width: 1px;
     word-wrap: normal;
 }
+
 /* Skip links (works together with .screen-reader-text). */
 .skip-link {
     background-color: #eee;
@@ -373,37 +379,38 @@ span.tooltip:focus::after {
     padding-right: 0.3em;
 }
 
-/* Tab interface */
-
-[role="tablist"] {
-    padding: 0;
+.header-with-logo header {
+    text-align: center;
+    line-height: 2;
 }
 
-[role="tablist"] li, [role="tablist"] a {
-    display: inline-block;
+.header-with-logo footer {
+    line-height: normal;
+}
+.header-with-logo h1  {
+    color: #0600ed;
+    line-height: 2;
 }
 
-[role="tablist"] a {
-    text-decoration: none;
-    padding: 0.5rem 1em;
+.header-with-logo h1 span {
+    color: #333;
 }
 
-[role="tablist"] [aria-selected] {
-    border: 2px solid;
-    background: #fff;
-    border-bottom: 0;
-    position: relative;
-    top: 2px;
+.header-logo {
+    width: 150px;
+    height: auto;
 }
 
-[role="tabpanel"] {
-    border: 2px solid;
-    padding: 1.5rem;
+.header-with-logo ul {
+    margin-left: 3em;
+    line-height: 3;
+    list-style: none;
 }
 
-[role="tabpanel"] * + * {
-    margin-top: 0.75rem;
+.header-with-logo ul li {
+    border-bottom: 1px solid #757575;
 }
+
 
 button.expandable + [aria-hidden] {
     display: none;
@@ -433,4 +440,13 @@ button.expandable + [aria-hidden="false"] {
 .errors h3 {
     color: #b00;
     font-weight: bold;
+}
+
+.new-line {
+    display: block;
+}
+
+footer {
+    margin-top: 2em;
+    border-top: solid 2px #ccc;
 }
