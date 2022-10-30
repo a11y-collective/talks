@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aria-describedby</title>
+    <link href="https://fonts.googleapis.com/css?family=Arvo%7CIBM+Plex+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" media="all">
+    <meta name="robots" content="noindex,nofollow">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Aria-describedby</h1>
+
+</header>
+
+<main>
+
+    <form class="block">
+        <label for="new-password">Your new password</label><br />
+        <input type="password" id="new-password" aria-describedby="new-password-description" autocomplete="new-password">
+        <p id="new-password-description" class="description">Please use a password of minimal 8 characters.</p>
+    </form>
+
+    <form class="block">
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms" aria-describedby="terms-link">I agree with the terms & conditions</label>
+        <p id="terms-link" class="description">Please read <a href="#">our terms & conditions</a>.</p>
+    </form>
+
+</main>
+
+<footer>
+    <ul>
+        <li><a href="index.html">Back to index</a></li>
+        <li><a href="https://docs.gravityforms.com/category/knowledge-base/accessibility/">Gravity Forms Knowledge Base on Accessibility</a></li>
+        <li><a href="https://a11y-collective.com/">The A11Y collective</a></li>
+    </ul>
+</footer>
+
+</body>
+
+</html>
