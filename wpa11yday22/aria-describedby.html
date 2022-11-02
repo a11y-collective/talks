@@ -20,15 +20,18 @@
 <main>
 
     <form class="block">
-        <label for="new-password">Your new password</label><br />
+        <label for="new-password" class="new-line">Your new password</label>
         <input type="password" id="new-password" aria-describedby="new-password-description" autocomplete="new-password">
         <p id="new-password-description" class="description">Please use a password of minimal 8 characters.</p>
     </form>
 
     <form class="block">
-        <input type="checkbox" id="terms" name="terms">
-        <label for="terms" aria-describedby="terms-link">I agree with the terms & conditions</label>
-        <p id="terms-link" class="description">Please read <a href="#">our terms & conditions</a>.</p>
+        <fieldset>
+        <legend>Consent</legend>
+            <input type="checkbox" id="terms" name="terms" aria-describedby="terms-link">
+            <label for="terms" >I agree with the terms & conditions</label>
+            <p id="terms-link" class="description">Please read <a href="#">our terms & conditions</a>.</p>
+        </fieldset>
     </form>
 
 </main>
